@@ -17,12 +17,7 @@ export class RepositoryListComponent implements OnInit {
   }
 
   deleteRepo(id) {
-    for (let i = 0; i < this.repositories.length; i++) {
-      if (this.repositories[i].id === id) {
-        this.repositories.splice(i, 1);
-        break;
-      }
-    }
+    this.repositories = this.repositories.filter(repo => repo.id !== id);
   }
 
   ngOnInit(): void {
