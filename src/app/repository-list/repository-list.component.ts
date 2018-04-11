@@ -10,11 +10,14 @@ import { RcsService } from '../rcs.service';
 export class RepositoryListComponent implements OnInit {
 
   repositories: Repository[] = [];
+  languagesSearch: string;
 
-  constructor(private rcsService: RcsService) { }
+  constructor(private rcsService: RcsService) {
+    this.languagesSearch = '';
+  }
 
   ngOnInit(): void {
     this.rcsService.getRepository().subscribe(data => { this.repositories = data; console.log(this.repositories); });
-   }
+  }
 
 }
