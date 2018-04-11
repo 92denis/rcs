@@ -11,13 +11,15 @@ import { RepositoryListComponent } from './repository-list/repository-list.compo
 import { RepositoryItemComponent } from './repository-item/repository-item.component';
 import { RcsService } from './rcs.service';
 import { SearchPipe } from './search.pipe';
+import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RepositoryListComponent,
     RepositoryItemComponent,
-    SearchPipe
+    SearchPipe,
+    EditDialogComponent
   ],
   imports: [
     BrowserModule,
