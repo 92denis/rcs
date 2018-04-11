@@ -1,3 +1,4 @@
+<div class="wrapper">
 <form >
   <mat-form-field >
     <input matInput placeholder="Search by languages..." name ='languagesSearch'  [(ngModel)]="languagesSearch" >
@@ -5,3 +6,4 @@
 </form>
 
 <repository-item *ngFor="let repo of repositories | search:languagesSearch" [repo]='repo'></repository-item>
+</div>
