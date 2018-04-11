@@ -1,3 +1,15 @@
-<p>
-  edit-dialog works!
-</p>
+<h1 mat-dialog-title>Edit</h1>
+<div mat-dialog-content>
+  <mat-form-field class="input-width">
+    <input matInput placeholder="Name repository..." [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field class="input-width">
+    <input matInput placeholder="Language..." [(ngModel)]="data.language">
+  </mat-form-field>
+  <mat-form-field class="input-width">
+    <textarea matInput placeholder="Description" [(ngModel)]="data.description"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>
