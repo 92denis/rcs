@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-import {MatToolbarModule} from '@angular/material';
+import {MatToolbarModule, MatListModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { RepositoryListComponent } from './repository-list/repository-list.component';
@@ -20,7 +20,8 @@ import { RepositoryItemComponent } from './repository-item/repository-item.compo
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatListModule
     ],
   providers: [RcsService],
   bootstrap: [AppComponent]
