@@ -4,4 +4,4 @@
   </mat-form-field>
 </form>
 
-<repository-item *ngFor="let repo of repositories" [repo]='repo'></repository-item>
+<repository-item *ngFor="let repo of repositories | search:languagesSearch" [repo]='repo'></repository-item>

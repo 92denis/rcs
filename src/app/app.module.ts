@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 import { RepositoryListComponent } from './repository-list/repository-list.component';
 import { RepositoryItemComponent } from './repository-item/repository-item.component';
 import { RcsService } from './rcs.service';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     RepositoryListComponent,
-    RepositoryItemComponent
+    RepositoryItemComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
