@@ -16,6 +16,15 @@ export class RepositoryListComponent implements OnInit {
     this.languagesSearch = '';
   }
 
+  deleteRepo(id) {
+    for (let i = 0; i < this.repositories.length; i++) {
+      if (this.repositories[i].id === id) {
+        this.repositories.splice(i, 1);
+        break;
+      }
+    }
+  }
+
   ngOnInit(): void {
     this.rcsService.getRepository().subscribe(data => { this.repositories = data; console.log(this.repositories); });
   }
