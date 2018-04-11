@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { MatToolbarModule, MatListModule, MatInputModule, MatFormFieldModule } from '@angular/material';
+import { MatToolbarModule, MatListModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { RepositoryListComponent } from './repository-list/repository-list.component';
@@ -27,7 +27,9 @@ import { SearchPipe } from './search.pipe';
     MatToolbarModule,
     MatListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [RcsService],
   bootstrap: [AppComponent]
