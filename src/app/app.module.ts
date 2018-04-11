@@ -6,7 +6,8 @@ import {MatToolbarModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { RepositoryListComponent } from './repository-list/repository-list.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { RcsService } from './rcs.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { RepositoryListComponent } from './repository-list/repository-list.compo
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatToolbarModule
     ],
-  providers: [],
+  providers: [RcsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
