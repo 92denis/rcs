@@ -1,0 +1,12 @@
+.wrapper{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    padding: 15px;
+    margin-bottom: 5px;
+}
+.data-repo{
+    flex: 9;
+    flex-direction: column;
+}
+
