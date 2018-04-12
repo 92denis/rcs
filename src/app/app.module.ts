@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { MatToolbarModule, MatListModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatIconModule, MatDialogModule } from '@angular/material';
+import { MatToolbarModule, MatListModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatIconModule, MatDialogModule, MatCardModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { RepositoryListComponent } from './repository-list/repository-list.component';
@@ -43,7 +43,8 @@ const appRoutes: Routes = [
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCardModule
   ],
   entryComponents: [EditDialogComponent],
   providers: [RcsService],

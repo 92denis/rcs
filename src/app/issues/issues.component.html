@@ -1,3 +1,13 @@
-<p>
- {{name}}
-</p>
+<mat-card class="wrapper" *ngFor="let issue of issues">
+  <div class="data-user">
+    <div class="data-user">
+      <img src={{issue.user.avatar_url}}>
+    </div>
+    <div>{{issue.user.login}}</div>
+  </div>
+  <div class="data-issue">
+    <mat-card-title>{{issue.title}}</mat-card-title>
+    <mat-card-subtitle>{{issue.body}}</mat-card-subtitle>
+    <button color='primary' mat-raised-button>LIKE</button>
+  </div>
+</mat-card>
