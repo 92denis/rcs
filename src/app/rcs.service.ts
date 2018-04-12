@@ -12,7 +12,7 @@ export class RcsService {
   constructor(private http: HttpClient) { }
 
   getRepository(): Observable<Repository[]> {
-    return this.http.get('https://api.github.com/users/Automattic/repos').map((data: Repository[]) => {
+    return this.http.get('https://api.github.com/users/Automattic/repos?page=1&per_page=100').map((data: Repository[]) => {
       return data;
     });
   }
