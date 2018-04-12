@@ -9,10 +9,18 @@ import { MatToolbarModule, MatListModule, MatInputModule, MatFormFieldModule, Ma
 import { AppComponent } from './app.component';
 import { RepositoryListComponent } from './repository-list/repository-list.component';
 import { RepositoryItemComponent } from './repository-item/repository-item.component';
-import { RcsService } from './rcs.service';
-import { SearchPipe } from './search.pipe';
 import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 import { IssuesComponent } from './issues/issues.component';
+
+import { RcsService } from './rcs.service';
+import { SearchPipe } from './search.pipe';
+
+import { Routes, RouterModule } from '@angular/router';
+
+
+const appRoutes: Routes = [
+  { path: '', component: RepositoryListComponent },
+  { path: 'issues', component: IssuesComponent }]
 
 @NgModule({
   declarations: [
@@ -24,6 +32,7 @@ import { IssuesComponent } from './issues/issues.component';
     IssuesComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
