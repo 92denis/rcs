@@ -1,4 +1,4 @@
-<mat-list routerLink="/issues">
+<mat-list [routerLink]="['issues', repo.name]">
   <h3 mat-subheader>{{repo.name| uppercase}}</h3>
   <mat-list-item>
     <h4 mat-line>{{repo.language}}</h4>

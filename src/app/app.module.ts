@@ -20,7 +20,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
   { path: '', component: RepositoryListComponent },
-  { path: 'issues', component: IssuesComponent }]
+  { path: 'issues/:name', component: IssuesComponent }];
 
 @NgModule({
   declarations: [
