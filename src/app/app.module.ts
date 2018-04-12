@@ -12,6 +12,7 @@ import { RepositoryItemComponent } from './repository-item/repository-item.compo
 import { RcsService } from './rcs.service';
 import { SearchPipe } from './search.pipe';
 import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
+import { IssuesComponent } from './issues/issues.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
     RepositoryListComponent,
     RepositoryItemComponent,
     SearchPipe,
-    EditDialogComponent
+    EditDialogComponent,
+    IssuesComponent
   ],
   imports: [
     BrowserModule,
