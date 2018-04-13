@@ -17,13 +17,14 @@ export class RepositoryListComponent implements OnInit {
   constructor(private rcsService: RcsService) {
     this.languagesSearch = '';
     this.buttonName = 'Sort descending';
-  }
+    }
 
   deleteRepo(id) {
     this.repositories = this.repositories.filter(repo => repo.id !== id);
   }
 
   sortA_Z() {
+    this.sort = !this.sort;
     this.repositories.sort((a, b) => {
       if (this.sort) {
         this.buttonName = 'Sort descending';
@@ -34,8 +35,7 @@ export class RepositoryListComponent implements OnInit {
       }
     });
 
-    this.sort = !this.sort;
-  }
+ }
 
   ngOnInit(): void {
     this.rcsService.getRepositories().subscribe(data => this.repositories = data);
