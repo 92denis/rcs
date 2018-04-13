@@ -24,18 +24,16 @@ export class RepositoryListComponent implements OnInit {
   }
 
   sortA_Z() {
-    this.rcsService.getRepositories().subscribe(data => {
-      this.repositories = data;
-      this.repositories.sort((a, b) => {
-        if (this.sort) {
-          this.buttonName = 'Sort descending';
-          return +(a.name.toLowerCase() > b.name.toLowerCase()) || +(a.name.toLowerCase() === b.name.toLowerCase()) - 1;
-        } else {
-          this.buttonName = 'Sort ascending';
-          return +(a.name.toLowerCase() < b.name.toLowerCase()) || +(a.name.toLowerCase() === b.name.toLowerCase()) - 1;
-        }
-      });
+    this.repositories.sort((a, b) => {
+      if (this.sort) {
+        this.buttonName = 'Sort descending';
+        return +(a.name.toLowerCase() > b.name.toLowerCase()) || +(a.name.toLowerCase() === b.name.toLowerCase()) - 1;
+      } else {
+        this.buttonName = 'Sort ascending';
+        return +(a.name.toLowerCase() < b.name.toLowerCase()) || +(a.name.toLowerCase() === b.name.toLowerCase()) - 1;
+      }
     });
+
     this.sort = !this.sort;
   }
 
