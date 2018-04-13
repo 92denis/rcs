@@ -1,9 +1,15 @@
 <div class="wrapper">
-<form >
-  <mat-form-field >
-    <input matInput placeholder="Search by languages..." name ='languagesSearch'  [(ngModel)]="languagesSearch" >
-  </mat-form-field>
-</form>
-
-<repository-item *ngFor="let repo of repositories | search:languagesSearch" [repo]='repo' (deleteRepo)='deleteRepo($event)'></repository-item>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Search by languages..." name='languagesSearch' [(ngModel)]="languagesSearch">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="sortA_Z() ">
+    {{buttonName}}
+    <mat-icon *ngIf ="sort">arrow_downward
+    </mat-icon>
+    <mat-icon *ngIf ="!sort">arrow_upward
+    </mat-icon>
+  </button>
+  <repository-item *ngFor="let repo of repositories | search:languagesSearch" [repo]='repo' (deleteRepo)='deleteRepo($event)'></repository-item>
 </div>
