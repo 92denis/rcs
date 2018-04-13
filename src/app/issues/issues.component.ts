@@ -31,6 +31,7 @@ export class IssuesComponent implements OnInit {
 
   addIssue(newIssue) {
     this.issues.push(newIssue);
+    this.newIssue = new Issue();
   }
 
   ngOnInit() {
