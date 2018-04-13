@@ -9,9 +9,9 @@
   <div class="data-issue">
     <mat-card-title>{{issue.title}}</mat-card-title>
     <mat-card-subtitle>{{issue.body}}</mat-card-subtitle>
-    <ol *ngFor="let comment of issue.comments">
-      <li>{{comment}}</li>
-    </ol>
+    <div *ngFor="let comment of issue.comments">
+      <p>{{comment}}</p>
+    </div>
     <div>
       <mat-form-field class="input-width">
         <textarea matInput placeholder="Comment" #text></textarea>
