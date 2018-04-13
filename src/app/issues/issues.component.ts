@@ -10,13 +10,20 @@ import { RcsService } from '../rcs.service';
   styleUrls: ['./issues.component.css']
 })
 export class IssuesComponent implements OnInit {
-
   name: string;
   subscription: Subscription;
   issues: Issue[];
 
   constructor(private activateRoute: ActivatedRoute, private rcsServise: RcsService) {
     this.subscription = this.activateRoute.params.subscribe(params => this.name = params['name']);
+  }
+
+  addComment(value: string, issue: Issue) {
+    this.issues.map(item => {
+      if (item.id === issue.id) {
+        item.comments.push(value);
+      }
+    });
   }
 
   ngOnInit() {

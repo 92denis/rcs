@@ -9,6 +9,17 @@
   <div class="data-issue">
     <mat-card-title>{{issue.title}}</mat-card-title>
     <mat-card-subtitle>{{issue.body}}</mat-card-subtitle>
-    <button color='primary' mat-raised-button>LIKE</button>
+    <ol *ngFor="let comment of issue.comments">
+      <li>{{comment}}</li>
+    </ol>
+    <div>
+      <mat-form-field class="input-width">
+        <textarea matInput placeholder="Comment" #text></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="addComment(text.value, issue); text.value =''">
+        Send
+      </button>
+    </div>
   </div>
+
 </mat-card>
