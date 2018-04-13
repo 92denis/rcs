@@ -16,10 +16,12 @@ export class RcsService {
       return data;
     });
   }
-  
+
   getIssues(name: string): Observable<Issue[]> {
     return this.http.get(`https://api.github.com/repos/Automattic/${name}/issues`).map((data: Issue[]) => {
-      return data;
+      return data.map(issue => {
+        return { id: issue.id, title: issue.title, comments: [], user: issue.user, body: issue.body };
+      });
     });
   }
 }
