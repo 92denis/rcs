@@ -21,7 +21,7 @@ export class RepositoryListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.rcsService.getRepository().subscribe(data => { this.repositories = data; console.log(this.repositories); });
+    this.rcsService.getRepositories().subscribe(data => this.repositories = data );
   }
 
 }
