@@ -22,12 +22,13 @@ export class IssuesComponent implements OnInit {
   }
 
   addComment(value: string, issue: Issue) {
-    this.issues.map(item => {
+    this.issues.forEach(item => {
       if (item.id === issue.id) {
         item.comments.push(value);
       }
     });
   }
+
   addIssue(newIssue) {
     this.issues.push(newIssue);
   }
