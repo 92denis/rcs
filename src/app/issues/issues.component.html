@@ -1,4 +1,16 @@
 <h1>Issues of {{name}} repository</h1>
+<div class="add-issue">
+  <mat-form-field class="input-width">
+    <input matInput placeholder="Title issue..." [(ngModel)]="newIssue.title">
+  </mat-form-field>
+  <mat-form-field class="input-width">
+    <input matInput placeholder="Body issue..." [(ngModel)]="newIssue.body">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="addIssue(newIssue)">
+    <mat-icon>add</mat-icon>
+    Add Issue
+  </button>
+</div>
 <mat-card class="wrapper" *ngFor="let issue of issues">
   <div class="data-user">
     <div class="data-user">

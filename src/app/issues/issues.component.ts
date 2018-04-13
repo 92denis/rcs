@@ -10,11 +10,14 @@ import { RcsService } from '../rcs.service';
   styleUrls: ['./issues.component.css']
 })
 export class IssuesComponent implements OnInit {
+
   name: string;
   subscription: Subscription;
   issues: Issue[];
+  newIssue: Issue;
 
   constructor(private activateRoute: ActivatedRoute, private rcsServise: RcsService) {
+    this.newIssue = new Issue();
     this.subscription = this.activateRoute.params.subscribe(params => this.name = params['name']);
   }
 
@@ -24,6 +27,9 @@ export class IssuesComponent implements OnInit {
         item.comments.push(value);
       }
     });
+  }
+  addIssue(newIssue) {
+    this.issues.push(newIssue);
   }
 
   ngOnInit() {

@@ -17,5 +17,11 @@ img{
     height: 100px;
 }
 .input-width{
-    width: 50%;
+    width: 40%;
+}
+.add-issue{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+   justify-content:space-between;
 }
